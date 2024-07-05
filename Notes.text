@@ -1,0 +1,38 @@
+How to create and run playwright tests?
+---------------------------------------
+
+npx playwright test                                            runs on all browsers in headless mode
+npx playwright test MyTest.spec.js                             runs a specific file
+npx playwright test MyTest.spec.js --project=chromium          runs a specific file in chromium
+playwright test MyTest.spec.js --project=chromium --headed     runs a specific file in chromium in heade mode
+playwright test MyTest.spec.js --project=chromium --headed  --debug   runs in debug mode
+
+
+
+[ Default is headless mode ]
+
+Locating Elements in playwright
+-------------------------------
+
+property
+css
+xpath
+
+Locating single Elements
+------------------------
+link/buton
+await page.locator('locator').click()
+await page.click('locator')
+
+Input box
+await page.locator('locator).fill('value')
+await page.locator('locator).type('value')
+
+await page.fill('locator','value')
+await page.type('locator','value')
+
+locate multiple web Elements
+----------------------------
+const elements =  await page.$$(locator)
+
+
