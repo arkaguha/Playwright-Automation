@@ -36,3 +36,35 @@ locate multiple web Elements
 const elements =  await page.$$(locator)
 
 
+Built in Locators
+------------------
+
+page.getByAltText() - to locate an element, usually image, by its text alternative.
+page.getByPlaceholder() - to locate an input by placeholder.
+page.getByRole() to locate by explicit and implicit accessibility attributes.
+page.getByText() to locate by text content.
+
+page.getByLabel() to locate a form control by associated label's text.
+page.getByTitle() to locate an element by its title attribute.
+page.getByTestId() to locate an element based on its data-testid attribute (other attributes can be configured).
+
+
+Assertions
+-----------
+1) expect(page).toHaveURL()   Page has URL
+2) expect(page).toHaveTitle()   Page has title
+3) expect(locator).toBeVisible()  Element is visible
+4) expect(locator).toBeEnabled()  Control is enabled
+5) expect(locator).toBeChecked()  Radio/Checkbox is checked
+6) expect(locator).toHaveAttribute() Element has attribute
+7) expect(locator).toHaveText()  Element matches text
+8) expect(locator).toContainText()  Element contains text
+9) expect(locator).toHaveValue(value) Input has a value
+10) expect(locator).toHaveCount()  List of elements has given length
+
+
+
+
+
+
+
