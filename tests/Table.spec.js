@@ -48,8 +48,8 @@ test("Handle Web Table", async ({ page }) => {
   console.log(await pages.count());
 
   for (let p = 0; p < (await pages.count()); p++) {
-      if (p > 0) {
-        console.log(p);
+    if (p > 0) {
+      console.log(p);
       await page.locator("#pagination li a").nth(p).click();
       await page.waitForTimeout(3000);
     }
